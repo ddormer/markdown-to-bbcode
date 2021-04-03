@@ -2,12 +2,12 @@
   "name": "markdown-to-bbcode",
   "dependencies": {
     "commonmark": "^0.29.3",
-    "mdurl": "^1.0.1"
+    "mdurl": "^1.0.1",
+    "webpack": "^5.30.0"
   },
   "description": "Convert Markdown to BBCode",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
