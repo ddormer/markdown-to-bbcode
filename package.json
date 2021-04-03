@@ -1,0 +1,7 @@
+{
+  "name": "markdown-to-bbcode",
+  "dependencies": {
+    "commonmark": "^0.29.3",
+    "mdurl": "^1.0.1"
+  }
+}
