@@ -3,5 +3,26 @@
   "dependencies": {
     "commonmark": "^0.29.3",
     "mdurl": "^1.0.1"
-  }
+  },
+  "description": "Convert Markdown to BBCode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddormer/markdown-to-bbcode.git"
+  },
+  "keywords": [
+    "markdown",
+    "bbcode"
+  ],
+  "author": "Darren Dormer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddormer/markdown-to-bbcode/issues"
+  },
+  "homepage": "https://github.com/ddormer/markdown-to-bbcode#readme"
 }
