@@ -35,7 +35,6 @@ function tag(name, attrs, selfclosing) {
     this.lastOut = "]";
 }
 
-
 function BBCodeRenderer(options) {
     options = options || {};
     options.softbreak = options.softbreak || "\n";
@@ -104,7 +103,6 @@ function strong(node, entering) {
     this.tag(entering ? "b" : "/b");
 }
 
-
 function paragraph(node, entering) {
     var grandparent = node.parent.parent,
         attrs = this.attrs(node);
@@ -123,8 +121,6 @@ function paragraph(node, entering) {
 
 function heading(node, entering) {
     var starting_size = 8;
-    var tagname = "h" + node.level,
-        attrs = this.attrs(node);
     if (entering) {
         this.cr();
         this.tag('b');
@@ -160,8 +156,7 @@ function code_block(node) {
 function thematic_break(node) {
     var attrs = this.attrs(node);
     this.cr();
-    //this.tag("hr", attrs, true);
-    this.cr();
+    this.lit(this.options.softbreak);
 }
 
 function block_quote(node, entering) {
@@ -178,9 +173,7 @@ function block_quote(node, entering) {
 }
 
 function list(node, entering) {
-    var tagname = node.listType === "bullet" ? "ul" : "ol",
-        attrs = this.attrs(node);
-
+    var attrs = this.attrs(node);
     if (node.listType === "ordered") {
         attrs.push(["tag_value", 1]);
     }
