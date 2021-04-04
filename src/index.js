@@ -38,9 +38,8 @@ function tag(name, attrs, selfclosing) {
 function BBCodeRenderer(options) {
     options = options || {};
     options.softbreak = options.softbreak || "\n";
-    // set to " " if you want to ignore line wrapping in source
+    options.newline_after_heading = options.newline_after_heading || true;
     this.esc = options.esc || escape;
-
     this.disableTags = 0;
     this.lastOut = "\n";
     this.options = options;
@@ -128,7 +127,9 @@ function heading(node, entering) {
     } else {
         this.tag("/size");
         this.tag('/b');
-        this.lit(this.options.softbreak);
+        if (this.options.newline_after_heading) {
+            this.lit(this.options.softbreak);
+        }
     }
 }
 
