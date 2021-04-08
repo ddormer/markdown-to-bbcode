@@ -10,7 +10,6 @@ var potentiallyUnsafe = function(url) {
 
 // Helper function to produce a BBCode tag.
 function tag(name, attrs, selfclosing) {
-    console.log(attrs);
     if (this.disableTags > 0) {
         return;
     }
@@ -134,9 +133,11 @@ function heading(node, entering) {
 }
 
 function code(node) {
-    this.tag("code");
+    var attrs = this.attrs(node);
+    attrs.push(["tag_value", "monospace"]);
+    this.tag("font", attrs);
     this.out(node.literal);
-    this.tag("/code");
+    this.tag("/font");
 }
 
 function code_block(node) {
