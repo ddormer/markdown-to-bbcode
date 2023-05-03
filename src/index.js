@@ -102,8 +102,8 @@ function strong(node, entering) {
 }
 
 function paragraph(node, entering) {
-    var grandparent = node.parent.parent,
-        attrs = this.attrs(node);
+    var grandparent = node.parent.parent;
+    var attrs = this.attrs(node);
     if (grandparent !== null && grandparent.type === "list") {
         if (grandparent.listTight) {
             return;
@@ -126,7 +126,7 @@ function heading(node, entering) {
         this.tag("/size");
         this.tag('/b');
         if (this.options.newline_after_heading) {
-            this.lit(this.options.softbreak);
+            this.softbreak()
         }
     }
 }
@@ -157,7 +157,7 @@ function code_block(node) {
 function thematic_break(node) {
     var attrs = this.attrs(node);
     this.cr();
-    this.lit(this.options.softbreak);
+    this.softbreak()
 }
 
 function block_quote(node, entering) {
