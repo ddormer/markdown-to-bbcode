@@ -119,14 +119,15 @@ function paragraph(node, entering) {
 function heading(node, entering) {
     var starting_size = 8;
     if (entering) {
-        this.cr();
+        this.softbreak();
         this.tag('b');
         this.tag("size=" + (starting_size - node.level));
     } else {
         this.tag("/size");
         this.tag('/b');
+        this.softbreak();
         if (this.options.newline_after_heading) {
-            this.softbreak()
+            this.linebreak()
         }
     }
 }
@@ -183,7 +184,7 @@ function list(node, entering) {
         if (start !== null && start !== 1) {
             attrs.push(["start", start.toString()]);
         }
-        this.cr();
+        this.softbreak();
         this.tag("list", attrs);
         this.cr();
     } else {
