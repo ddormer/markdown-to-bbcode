@@ -7,7 +7,8 @@
   },
   "description": "BBCode renderer for commonmark.js",
   "main": "dist/markdown-to-bbcode.node.js",
-  "version": "0.3.2",
+  "type": "module",
+  "version": "0.4.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
