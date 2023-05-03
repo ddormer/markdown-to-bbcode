@@ -110,10 +110,9 @@ function paragraph(node, entering) {
         }
     }
     if (entering) {
-        this.lit(this.options.softbreak);
+        this.softbreak();
     } else {
-        this.cr();
-        this.lit(this.options.softbreak);
+        this.softbreak();
     }
 }
 
