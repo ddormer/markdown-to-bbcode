@@ -1,14 +1,14 @@
 {
   "name": "markdown-to-bbcode",
   "dependencies": {
-    "commonmark": "^0.29.3",
+    "commonmark": "^0.31.2",
     "html-escaper": "^3.0.3",
     "mdurl": "^1.0.1"
   },
   "description": "BBCode renderer for commonmark.js",
   "main": "dist/markdown-to-bbcode.node.js",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"

@@ -74,20 +74,19 @@ function link(node, entering) {
 
 function image(node, entering) {
     if (entering) {
+        // ![text](http://link) will treat `text` as a child of this image.
         if (this.disableTags === 0) {
-            if (this.options.safe && potentiallyUnsafe(node.destination)) {
-                this.lit('[img]');
-            } else {
-                this.lit('[img]' + this.esc(node.destination));
-            }
+            this.lit('[img alt="');
         }
         this.disableTags += 1;
     } else {
         this.disableTags -= 1;
+        if (this.options.safe && potentiallyUnsafe(node.destination)) {
+            this.lit('"]');
+        } else {
+            this.lit('"]' + this.esc(node.destination))
+        }
         if (this.disableTags === 0) {
-            if (node.title) {
-                this.lit('" title="' + this.esc(node.title));
-            }
             this.lit('[/img]');
         }
     }
