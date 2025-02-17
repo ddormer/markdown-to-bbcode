@@ -1,6 +1,6 @@
-# markdown-to-bbcode
+# markdown-to-bbcode · [![Latest Stable Version](https://img.shields.io/npm/v/markdown-to-bbcode)](https://www.npmjs.com/package/markdown-to-bbcode)
 
-BBCode renderer for commonmark.js
+A BBCode renderer for commonmark.js
 
 ## Usage
 
