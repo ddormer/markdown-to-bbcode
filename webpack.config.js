@@ -20,8 +20,11 @@ module.exports = [
     filename: 'markdown-to-bbcode.node.js',
     path: path.resolve(__dirname, 'dist'),
     library: {
-      type: 'umd',
-    }
+      type: 'module',
+    },
   },
+    experiments: {
+      outputModule: true,
+    }
 }
 ];

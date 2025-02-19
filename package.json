@@ -8,7 +8,7 @@
   "description": "BBCode renderer for commonmark.js",
   "main": "dist/markdown-to-bbcode.node.js",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.5.5",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/ddormer/markdown-to-bbcode#readme",
   "devDependencies": {
-    "webpack": "^5.30.0",
+    "webpack": "^5.98.0",
     "webpack-cli": "^4.6.0"
   }
 }

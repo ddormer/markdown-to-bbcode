@@ -290,4 +290,5 @@ BBCodeRenderer.prototype.out = out;
 BBCodeRenderer.prototype.tag = tag;
 BBCodeRenderer.prototype.attrs = attrs;
 
+export default { BBCodeRenderer }
 export { BBCodeRenderer };
